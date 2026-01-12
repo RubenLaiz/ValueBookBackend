@@ -1,0 +1,21 @@
+version: '3.9'
+
+services:  
+  postgres:
+    build:
+      context: ./postgres  # Carpeta que contiene el Dockerfile de postgres
+    container_name: valuebook_PostgreSql
+    environment:
+      POSTGRES_USER: admin
+      POSTGRES_PASSWORD: admin123
+      POSTGRES_DB: valuebook
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres-data:/var/lib/postgresql/data
+      - ./postgres/init-db.sql:/docker-entrypoint-initdb.d/init-db.sql  # Archivo SQL de inicialización
+
+volumes:
+  postgres-data:
+    driver: local  # Volumen persistente para PostgreSQL
+

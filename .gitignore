@@ -1,0 +1,16 @@
+# Archivos que no se deben subir
+# Ignorar todos los archivos dentro de Multimedia pero mantener la estructura
+Multimedia/Peliculas/
+Multimedia/Portadas/Peliculas/
+Multimedia/Portadas/Series/
+Multimedia/Series/
+Logs/
+
+
+# Ignore bin and obj directories
+bin/
+obj/
+
+.vs/
+
+

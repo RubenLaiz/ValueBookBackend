@@ -1,0 +1,15 @@
+Comando para crear una migración:
+
+Windows:
+dotnet ef migrations add (NOMBRE DE LA MIGRACION) --project C:\Users\ruben\source\repos\ValueBookBackend\Infrastructure\Infrastructure.csproj --startup-project C:\Users\ruben\source\repos\ValueBookBackend\BaseDatosApi\BaseDatosApi.csproj
+
+Linux:
+dotnet ef migrations add (NOMBRE DE LA MIGRACION) --project /media/ruben/Multimedia/ElbaulNet/EBGBackend/Infrastructure/Infrastructure.csproj --startup-project /media/ruben/Multimedia/ElbaulNet/EBGBackend/BaseDatosApi/BaseDatosApi.csproj
+
+Comandos de creación del contenedor Docker:
+
+1 - sudo docker build -t elbauldegegyk .
+2 - sudo docker run --name elbauldegegyk -d -p 5432:5432 elbauldegegyk 
+
+1 - sudo docker build -t valuebook .
+2 - sudo docker run --name valuebook -d -p 5432:5432 valuebook
